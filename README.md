@@ -72,3 +72,7 @@ scripts/build.sh (left/right)
 ```
 
 - Put side into bootloader mode and copy build/zephyr/zmk.uf2 to the usb drive
+
+## Resources
+
+- [Stained Layout README](https://github.com/dlip/qmk_firmware/blob/dlip/keyboards/dlip/haritev2/dual_cirque/keymaps/stained/readme.md) - Computer-generated keyboard layout optimized for directional keyboards like Harite. Contains design metrics and links to the [keyboard layout optimizer](https://github.com/dlip/keyboard_layout_optimizer) tool for generating custom layouts.
