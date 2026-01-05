@@ -1,6 +1,14 @@
 #!/usr/bin/env bash
 set -euo pipefail
 source zephyr/zephyr-env.sh
+
+# Help CMake find Zephyr in this repo layout without needing to patch `zmk/app/CMakeLists.txt`.
+# This points `find_package(Zephyr)` at Zephyr's CMake package config:
+#   ${ZEPHYR_BASE}/share/zephyr-package/cmake/ZephyrConfig.cmake
+if [ -z "${Zephyr_DIR:-}" ]; then
+  export Zephyr_DIR="${ZEPHYR_BASE}/share/zephyr-package/cmake"
+fi
+
 if [ -z "${1:-}" ]; then
   echo "Error: build.sh <side(left/right)>"
 fi
